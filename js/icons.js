@@ -66,10 +66,9 @@ const icons = {
   null: `< / >`
 };
 
-let languages = 'cssjavascripthtml';
-
 const getIcon = lang => {
-  return !!lang && languages.includes(lang.toLowerCase())
-    ? icons[lang.toLowerCase()]
+  let langLower = lang.toLowerCase();
+  return !!lang && 'cssjavascripthtml'.includes(langLower)
+    ? icons[langLower]
     : icons['null'];
 };
