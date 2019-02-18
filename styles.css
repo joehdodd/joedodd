@@ -22,20 +22,28 @@ a {
   font-size: 18px;
 }
 
-.header-text {
+.intro-wrapper {
+  border-bottom: 1px dashed #2c3e50;
+  padding: 8px 4px;
+}
+
+.intro-header {
   color: #2c3e50;
   font-size: 48px;
   margin: 0;
+  margin-top: 4px;
+  line-height: 0.5;
 }
 
 .intro-text {
-  font-size: 32px;
-  margin-top: 5px;
-}
-
-.instruction-text {
   color: #2c3e50;
   font-size: 28px;
+  line-height: 0.75;
+}
+
+.intro-text > p {
+  margin: 0;
+  margin-bottom: 2px;
 }
 
 #reposContainer {
@@ -53,7 +61,6 @@ a {
   font-size: 18px;
   align-self: stretch;
   padding: 8px 4px;
-  border-radius: 4px;
   border-bottom: 1px dashed #2c3e50;
 }
 
