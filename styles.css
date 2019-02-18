@@ -9,7 +9,7 @@ body {
 a {
   text-decoration: none;
   font-weight: 700;
-  color: #85929E;
+  color: #85929e;
 }
 
 .main {
@@ -49,13 +49,12 @@ a {
 #reposContainer {
   display: grid;
   width: 100%;
-  grid-gap: 6px;
   grid-auto-flow: row;
 }
 
 .repoContainer {
   display: grid;
-  grid-template-columns: .05fr 1fr;
+  grid-template-columns: 0.05fr 1fr 0.5fr;
   grid-gap: 8px;
   color: #2c3e50;
   font-size: 18px;
@@ -76,8 +75,21 @@ a {
 .language-icon {
   height: 50px;
   width: 50px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
 }
 
+.repo-info {
+  display: grid;
+}
+
+.repo-stars-watchers {
+  display: grid;
+  justify-self: end;
+}
 @media screen and (min-width: 768px) {
   .main {
     width: 50%;

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async function(e) {
   const recentlyUpdated = update => {
     const currentDate = new Date();
     const updatedTime = new Date(update).getTime();
-    return updatedTime >= currentDate.setDate(currentDate.getDate() - 7);
+    return updatedTime >= currentDate.setDate(currentDate.getDate() - 14);
   };
 
   return repos.forEach(repo => {
@@ -20,9 +20,13 @@ document.addEventListener('DOMContentLoaded', async function(e) {
       repoEl.setAttribute('id', `repo_${repo.id}`);
       repoEl.innerHTML = `
         <div class="language-icon">${iconEl}</div>
-        <div>
+        <div class="repo-info">
           <h3>${repo.name}</h3>
           <span>${repo.description}</span>
+        </div>
+        <div class="repo-stars-watchers">
+          <span>Stars: ${repo.stargazers_count}</span>
+          <span>Watchers: ${repo.watchers_count}</span>
         </div>
       `;
       repoEl.addEventListener('click', function(e) {
