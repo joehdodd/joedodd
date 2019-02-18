@@ -62,9 +62,14 @@ const icons = {
                  style="fill:#ffffff" />
             </g>
           </g>
-        </svg>`
+        </svg>`,
+  null: `< / >`
 };
 
+let languages = 'cssjavascripthtml';
+
 const getIcon = lang => {
-  return !!lang && icons[lang.toLowerCase()];
+  return !!lang && languages.includes(lang.toLowerCase())
+    ? icons[lang.toLowerCase()]
+    : icons['null'];
 };
