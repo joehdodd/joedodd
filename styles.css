@@ -50,6 +50,9 @@ a {
   display: grid;
   width: 100%;
   grid-auto-flow: row;
+  max-height: 350px;
+  overflow-y: scroll;
+  margin-bottom: 8px;
 }
 
 .repoContainer {
