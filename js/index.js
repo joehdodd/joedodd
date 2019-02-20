@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function(e) {
   const USER = 'joehdodd';
   const reposContainer = document.getElementById('reposContainer');
-  const repos = await fetch(`https://api.github.com/users/${USER}/repos`).then(
+  const repos = await fetch(`https://api.github.com/users/${USER}/repos?sort=updated`).then(
     res => res.json()
   );
 
