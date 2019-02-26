@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', async function(e) {
           <h3>${repo.name}</h3>
           <span>${repo.description}</span>
         </div>
-        <div class="repo-stars-watchers">
+        <!-- <div class="repo-stars-watchers">
           <span>Stars: ${repo.stargazers_count}</span>
           <span>Watchers: ${repo.watchers_count}</span>
-        </div>
+        </div> -->
       `;
       repoEl.addEventListener('click', function(e) {
         e.preventDefault();
