@@ -24,7 +24,15 @@ nav {
 
 main {
   padding: 16px;
-  margin: 16px auto;
+  margin: 0 auto;
+}
+
+main p {
+  color: #79889e;
+}
+
+main > p {
+  font-size: 18px;
 }
 
 footer {
@@ -32,10 +40,6 @@ footer {
   color: #e8ecf4;
   height: 200px;
   padding: 16px;
-}
-
-main > p {
-  font-size: 18px;
 }
 
 .header-title {
@@ -62,7 +66,7 @@ main > p {
 .intro-title {
   font-size: 48px;
   color: #2c3e50;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .intro-subtext {
