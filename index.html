@@ -20,34 +20,72 @@
   </head>
   <body>
     <nav>
-      <div class="header-wrapper">
-        <h1 class="header-title">Joe Dodd</h1>
-        <p class="header-subtitle">Full Stack Developer</p>
+      <div class="header-container">
+        <div class="header-wrapper">
+          <h1 class="header-title">Joe Dodd</h1>
+          <p class="header-subtitle">Full Stack Developer</p>
+        </div>
       </div>
     </nav>
     <main>
-      <div class="main" id="main">
-        <section>
-          <div class="intro-wrapper">
+      <section>
+        <div class="user-container">
+          <div class="user-wrapper">
             <div>
               <h2 class="intro-title">I build applications. 💻 📱</h2>
               <div class="intro-subtext">
                 <p>
                   Whether web or native, I leverage technical expertise and
-                  natural curiosity to deliver high quality products that help users.
+                  natural curiosity to deliver high quality products that help
+                  users.
                 </p>
               </div>
+              <!-- <div class="intro-subtext">
+                  <p>
+                    Any items in this list are personal projects I've committed
+                    code to in the last 14 days.
+                    <span class="pointer-finger"></span>
+                  </p>
+                </div> -->
+            </div>
+            <div id="userContainer"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="intro-container">
+          <svg
+            viewBox="0 0 1200 53"
+            class="absolute top-0 text-white"
+            style="position: aboslute; top: 0; width: 100%; height: auto; color: hsl(0,0%,100%);"
+          >
+            <path
+              fill="currentColor"
+              d="M1196.008 53H1200V0H0v44.816-8.184C159.341 14.63 311.343 2.484 456.007.196 600.122-2.084 846.789 15.518 1196.008 53z"
+            ></path>
+          </svg>
+          <div class="intro-wrapper">
+            <div>
+              <!-- <h2 class="intro-title">I build applications. 💻 📱</h2>
+                  <div class="intro-subtext">
+                    <p>
+                      Whether web or native, I leverage technical expertise and
+                      natural curiosity to deliver high quality products that help
+                      users.
+                    </p>
+                  </div> -->
               <div class="intro-subtext">
                 <p>
                   Any items in this list are personal projects I've committed
-                  code to in the last 14 days. <span class="pointer-finger"></span>
+                  code to in the last 14 days.
+                  <span class="pointer-finger"></span>
                 </p>
               </div>
             </div>
             <div id="reposContainer"></div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer>
       <p style="font-size: 36px">Info</p>

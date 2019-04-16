@@ -7,9 +7,6 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'Markazi Text', serif;
-  background: linear-gradient(#e8ecf4, #fff);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 a {
@@ -18,12 +15,7 @@ a {
   color: #85929e;
 }
 
-nav {
-  padding: 16px;
-}
-
 main {
-  padding: 16px;
   margin: 0 auto;
 }
 
@@ -42,6 +34,32 @@ footer {
   padding: 16px;
 }
 
+.header-container {
+  padding: 16px;
+}
+
+.header-container,
+.user-container,
+.intro-container {
+  width: 100%;
+}
+
+.header-container,
+.user-container {
+  background-color: #fff;
+}
+
+.intro-container {
+  background: linear-gradient(#e8ecf4, #fff);
+}
+
+.header-wrapper,
+.intro-wrapper,
+.user-wrapper {
+  max-width: 60vw;
+  margin: auto;
+}
+
 .header-title {
   color: #2c3e50;
   font-size: 64px;
@@ -57,10 +75,22 @@ footer {
   margin: 0px;
 }
 
-.intro-wrapper {
+.intro-wrapper,
+.user-wrapper {
   display: grid;
   grid-auto-flow: row;
   grid-gap: 8px;
+}
+
+.avatar-wrapper {
+  padding: 8px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 4px 6px 14px 6px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  border-radius: 4px;
 }
 
 .intro-title {
@@ -168,8 +198,13 @@ footer {
 } */
 
 @media screen and (min-width: 768px) {
-  main {
-    height: 75vh;
+  .user-wrapper,
+  .intro-wrapper {
+    grid-auto-flow: column;
+  }
+
+  .user-container {
+    height: calc(75vh - 60px);
   }
 
   .intro-title {
@@ -189,7 +224,7 @@ footer {
     text-align: inherit;
   }
 
-  #reposContainer {
+  /* #reposContainer {
     width: 85%;
-  }
+  } */
 }
