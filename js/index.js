@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', async function(e) {
   const user = await fetch(`https://api.github.com/users/${USER}`).then(res =>
     res.json()
   );
-  console.log('user', user);
   if (!!user) {
     const userEl = document.createElement('div');
     userEl.innerHTML = `
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', async function(e) {
   };
 
   repos.forEach(repo => {
-    console.log(repo);
     if (!repo.fork && recentlyUpdated(repo.updated_at)) {
       const repoEl = document.createElement('div');
       const iconEl = getIcon(repo.language);
