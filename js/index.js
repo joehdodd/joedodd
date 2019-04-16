@@ -1,9 +1,22 @@
 document.addEventListener('DOMContentLoaded', async function(e) {
   const USER = 'joehdodd';
+  const userContainer = document.getElementById('userContainer');
   const reposContainer = document.getElementById('reposContainer');
-  const repos = await fetch(`https://api.github.com/users/${USER}/repos?sort=updated`).then(
-    res => res.json()
+  const user = await fetch(`https://api.github.com/users/${USER}`).then(res =>
+    res.json()
   );
+  if (!!user) {
+    const userEl = document.createElement('div');
+    userEl.innerHTML = `
+      <div class="avatar-wrapper">
+        <img class="avatar" src=${user.avatar_url} alt="Photo of Joe Dodd">
+      </div>
+    `;
+    userContainer.appendChild(userEl);
+  }
+  const repos = await fetch(
+    `https://api.github.com/users/${USER}/repos?sort=updated`
+  ).then(res => res.json());
 
   const recentlyUpdated = update => {
     const currentDate = new Date();
@@ -11,8 +24,7 @@ document.addEventListener('DOMContentLoaded', async function(e) {
     return updatedTime >= currentDate.setDate(currentDate.getDate() - 14);
   };
 
-  return repos.forEach(repo => {
-    console.log(repo);
+  repos.forEach(repo => {
     if (!repo.fork && recentlyUpdated(repo.updated_at)) {
       const repoEl = document.createElement('div');
       const iconEl = getIcon(repo.language);
