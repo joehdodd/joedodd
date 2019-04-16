@@ -7,9 +7,6 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'Markazi Text', serif;
-  background: linear-gradient(#e8ecf4, #fff);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 a {
@@ -18,12 +15,7 @@ a {
   color: #85929e;
 }
 
-nav {
-  padding: 16px;
-}
-
 main {
-  padding: 16px;
   margin: 0 auto;
 }
 
@@ -42,6 +34,31 @@ footer {
   padding: 16px;
 }
 
+.header-wrapper,
+.intro-wrapper,
+.user-wrapper {
+  max-width: 95vw;
+  margin: auto;
+}
+
+.header-container {
+  padding: 16px;
+}
+
+.header-container,
+.user-container {
+  background-color: #fff;
+}
+
+.user-container {
+  margin-bottom: 32px;
+}
+
+.intro-container {
+  padding-bottom: 64px;
+  background: linear-gradient(#e8ecf4, #fff);
+}
+
 .header-title {
   color: #2c3e50;
   font-size: 64px;
@@ -57,10 +74,27 @@ footer {
   margin: 0px;
 }
 
-.intro-wrapper {
+.intro-wrapper,
+.user-wrapper {
   display: grid;
   grid-auto-flow: row;
-  grid-gap: 8px;
+  grid-gap: 32px;
+}
+
+.avatar-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 4px 6px 14px 6px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .intro-title {
@@ -72,9 +106,8 @@ footer {
 
 .intro-subtext {
   width: 100%;
-  font-size: 24px;
+  font-size: 32px;
   margin-top: 0px;
-  border-top: 1px solid #cbd7e4;
 }
 
 .intro-subtext > p {
@@ -142,54 +175,31 @@ footer {
   justify-self: end;
 }
 
-/* .spinnerContainer {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.spinner {
-  background: transparent;
-  width: 25px;
-  border: solid 4px #85929e;
-  border-bottom: solid 4px #2c3e50;
-  height: 25px;
-  border-radius: 100%;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
-
 @media screen and (min-width: 768px) {
-  main {
-    height: 75vh;
+  .user-wrapper,
+  .intro-wrapper {
+    grid-auto-flow: column;
   }
 
   .intro-title {
     text-align: left;
   }
 
-  .intro-subtext {
-    width: 80%;
-  }
-
   .intro-wrapper {
-    grid-template-columns: 0.75fr 1fr;
+    grid-template-columns: 1fr 0.75fr;
   }
 
   .pointer-finger::after {
-    content: '👉';
+    content: '👈';
     text-align: inherit;
   }
+}
 
-  #reposContainer {
-    width: 85%;
+@media screen and (min-width: 1024px) {
+  .header-wrapper,
+  .intro-wrapper,
+  .user-wrapper {
+    max-width: 65vw;
+    margin: auto;
   }
 }
