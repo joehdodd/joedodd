@@ -145,11 +145,13 @@ footer {
   align-self: stretch;
   padding: 16px;
   border-top: 1px solid #e8ecf4;
+  border-radius: 8px;
 }
 
 .repoContainer:hover {
   background-color: #e8ecf4;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .repoContainer > div > h3 {
