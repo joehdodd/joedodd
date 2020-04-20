@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', async function(e) {
   const user = await fetch(`https://api.github.com/users/${USER}`).then(res =>
     res.json()
   );
-  if (!!user) {
-    const userEl = document.createElement('div');
-    userEl.innerHTML = `
-      <div class="avatar-wrapper">
-        <img class="avatar" src=${user.avatar_url} alt="Photo of Joe Dodd">
-      </div>
-    `;
-    userContainer.appendChild(userEl);
-  }
+  // if (!!user) {
+  //   const userEl = document.createElement('div');
+  //   userEl.innerHTML = `
+  //     <div class="avatar-wrapper">
+  //       <img class="avatar" src=${user.avatar_url} alt="Photo of Joe Dodd">
+  //     </div>
+  //   `;
+  //   userContainer.appendChild(userEl);
+  // }
   const repos = await fetch(
     `https://api.github.com/users/${USER}/repos?sort=updated`
   ).then(res => res.json());
@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', async function(e) {
   };
 
   repos.forEach(repo => {
-    if (!repo.fork && recentlyUpdated(repo.updated_at)) {
+    if (!repo.fork) {
+    // if (!repo.fork && recentlyUpdated(repo.updated_at)) {
       const repoEl = document.createElement('div');
       const iconEl = getIcon(repo.language);
       repoEl.setAttribute('class', 'repoContainer');
