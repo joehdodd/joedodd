@@ -30,7 +30,7 @@ main > p {
 footer {
   background-color: #586379;
   color: #e8ecf4;
-  height: 200px;
+  height: 100px;
   padding: 16px;
 }
 
@@ -50,9 +50,9 @@ footer {
   background-color: #fff;
 }
 
-.user-container {
+/* .user-container {
   margin-bottom: 32px;
-}
+} */
 
 .intro-container {
   padding-bottom: 64px;
@@ -74,7 +74,6 @@ footer {
   margin: 0px;
 }
 
-.intro-wrapper,
 .user-wrapper {
   display: grid;
   grid-auto-flow: row;
